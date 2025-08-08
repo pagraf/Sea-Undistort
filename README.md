@@ -27,15 +27,7 @@ If you use the code in this repository or the dataset please cite:
 
 >....
 ```
-@INPROCEEDINGS{10641355,
-  author={Agrafiotis, Panagiotis and Janowski, Łukasz and Skarlatos, Dimitrios and Demir, Begüm},
-  booktitle={IGARSS 2024 - 2024 IEEE International Geoscience and Remote Sensing Symposium}, 
-  title={MAGICBATHYNET: A Multimodal Remote Sensing Dataset for Bathymetry Prediction and Pixel-Based Classification in Shallow Waters}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={249-253},
-  doi={10.1109/IGARSS53475.2024.10641355}}
+
 ```
 <br />
 
