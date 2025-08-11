@@ -83,11 +83,11 @@ To train and test the models use
 ## Pre-trained Deep Learning Models
 We provide code and model weights for the following deep learning models that have been pre-trained on Sea-Undistort for through water image restoration:
 
-| Model Names | Pre-Trained PyTorch Models                                                                                                                | 
-| ----------- |----------| ---- |----------------------------------------------------------------------------------------------------------------------------------------------|
-| NDR-Restore | [unet_aerial_an.zip](https://drive.google.com/file/d/1vrYwOGEPbiuyvAmtE8-SfbDfzVWU8oMD/view?usp=sharing) |
-| ResShift | [segformer_aerial_an.zip](https://drive.google.com/file/d/1rUr_KvAgOKwBmykLoprUy4Aw4fCiYGIm/view?usp=sharing)            |
-| ResShift+EF | [unet_aerial_pl.zip](https://drive.google.com/file/d/1PVIRvFpiw4xf6xgLCF4Bzhpb_2wD3Q3G/view?usp=sharing) |
+| Model Names | Pre-Trained PyTorch Models                                                                                | 
+| ----------- |-----------------------------------------------------------------------------------------------------------|
+| NDR-Restore | [unet_aerial_an.zip](https://drive.google.com/file/d/1vrYwOGEPbiuyvAmtE8-SfbDfzVWU8oMD/view?usp=sharing)  |
+| ResShift | [segformer_aerial_an.zip](https://drive.google.com/file/d/1rUr_KvAgOKwBmykLoprUy4Aw4fCiYGIm/view?usp=sharing)|
+| ResShift+EF | [unet_aerial_pl.zip](https://drive.google.com/file/d/1PVIRvFpiw4xf6xgLCF4Bzhpb_2wD3Q3G/view?usp=sharing)  |
 
 To achieve the results presented in the paper, use the parameters and the specific train-evaluation splits provided in the dataset. 
 
