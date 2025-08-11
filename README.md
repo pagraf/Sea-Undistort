@@ -1,4 +1,5 @@
 
+<img width="944" height="135" alt="sea-undistort_logo" src="https://github.com/user-attachments/assets/da6cc0b3-fc0c-4433-9333-48e2fd3f89db" />
 
 
 # Sea-Undistort: A Synthetic Dataset for Restoring Through-Water Images in Airborne Bathymetric Mapping
