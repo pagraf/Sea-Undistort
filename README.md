@@ -12,7 +12,7 @@ Sea-Undistort is designed to support supervised training of deep learning models
 <br />
 <br />
 [![MagicBathy](https://img.shields.io/badge/MagicBathy-Project-red.svg)](https://www.magicbathy.eu) <br />
-DOI of Dataset Repository [![DOI](https://zenodo.org/badge/748123214.svg)](https://doi.org/10.5281/zenodo.15639838)
+DOI of Dataset Repository [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15639838.svg)](https://doi.org/10.5281/zenodo.15639838)
 <br />
 
 # Package for benchmarking Sea-Undistort dataset.
