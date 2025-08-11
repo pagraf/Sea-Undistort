@@ -65,44 +65,40 @@ The folder structure should be as follows:
 `git clone https://github.com/pagraf/Sea-Undistort.git`
 
 ## Installation Guide
-The requirements are easily installed via Anaconda (recommended):
 
-`conda env create -f environment.yml`
-
-After the installation is completed, activate the environment:
-
-`conda activate magicbathynet`
-
-Open Jupyter Notebook:
-
-`jupyter notebook`
 
 ## Train and Test the models
-To train and test the models use 
+To train and test the models use... 
 
 ## Pre-trained Deep Learning Models
 We provide code and model weights for the following deep learning models that have been pre-trained on Sea-Undistort for through water image restoration:
 
 | Model Names | Pre-Trained PyTorch Models                                                                                | 
 | ----------- |-----------------------------------------------------------------------------------------------------------|
-| NDR-Restore | [unet_aerial_an.zip](https://drive.google.com/file/d/1vrYwOGEPbiuyvAmtE8-SfbDfzVWU8oMD/view?usp=sharing)  |
-| ResShift | [segformer_aerial_an.zip](https://drive.google.com/file/d/1rUr_KvAgOKwBmykLoprUy4Aw4fCiYGIm/view?usp=sharing)|
-| ResShift+EF | [unet_aerial_pl.zip](https://drive.google.com/file/d/1PVIRvFpiw4xf6xgLCF4Bzhpb_2wD3Q3G/view?usp=sharing)  |
+| NDR-Restore | [NDR-Restore.zip]()  |
+| ResShift | [ResShift.zip]()|
+| ResShift+EF | [ResShift+EF.zip]()  |
 
 To achieve the results presented in the paper, use the parameters and the specific train-evaluation splits provided in the dataset. 
 
 ## Example testing results
-Example patch of the Agia Napa area ...
-
-
+Example imagery from the Agia Napa area: : (a) original patches; restorations using (b) NDR-Restore, (c) ResShift, and (d) ResShift+EF.
+<img width="360" height="360" alt="IMG_4085_org" src="https://github.com/user-attachments/assets/191ab0f3-0c87-4a3b-9248-9f2aaa88bb6c" />
+<img width="360" height="360" alt="IMG_4085_ndr" src="https://github.com/user-attachments/assets/251779e3-e2b1-4997-8bd8-0d98a08c8de5" />
+<img width="360" height="360" alt="IMG_4085_resshift" src="https://github.com/user-attachments/assets/ae84cc41-68a3-4785-b377-880cf83bce1a" />
+<br /><img width="360" height="360" alt="IMG_4085_resshift+ef" src="https://github.com/user-attachments/assets/eace004a-e2c4-4db2-8f71-5b1b23e2da25" />
 
 ## Authors
 Maximilian Kromer and Panagiotis Agrafiotis [https://www.user.tu-berlin.de/pagraf/](https://www.user.tu-berlin.de/pagraf/)
 
+
+
+
 ## Feedback
 Feel free to give feedback, by sending an email to: agrafiotis@tu-berlin.de
 <br />
-<br />
+
+
 
 # Funding
 This work is part of **MagicBathy project funded by the European Union’s HORIZON Europe research and innovation programme under the Marie Skłodowska-Curie GA 101063294**. Work has been carried out at the [Remote Sensing Image Analysis group](https://rsim.berlin/). For more information about the project visit [https://www.magicbathy.eu/](https://www.magicbathy.eu/).
