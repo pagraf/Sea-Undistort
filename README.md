@@ -19,16 +19,26 @@ DOI of Dataset Repository [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15
 
 This repository contains the code of the paper "M. Kromer, P. Agrafiotis, and B. Demir, "Sea-Undistort: A Dataset for Through-Water Image Restoration in High Resolution Airborne Bathymetric Mapping" submitted to IEEE GRSL"<br />
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2405.15477) [![IEEE](https://img.shields.io/badge/IEEE-Paper-blue.svg)](https://ieeexplore.ieee.org/document/10641355)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]([https://arxiv.org/abs/2405.15477](https://doi.org/10.48550/arXiv.2508.07760))
 
 ## Citation
 
 If you find this repository useful, please consider giving a star ⭐.<br />
 If you use the code in this repository or the dataset please cite:
 
->....
-```
 
+>Kromer, M., Agrafiotis, P., & Demir, B. (2025). Sea-Undistort: A dataset for through-water image restoration in high resolution airborne bathymetric mapping. arXiv. https://arxiv.org/abs/2508.07760
+>
+```
+@misc{kromer2025seaundistortdatasetthroughwaterimage,
+      title={Sea-Undistort: A Dataset for Through-Water Image Restoration in High Resolution Airborne Bathymetric Mapping}, 
+      author={Maximilian Kromer and Panagiotis Agrafiotis and Begüm Demir},
+      year={2025},
+      eprint={2508.07760},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2508.07760}, 
+}
 ```
 <br />
 
