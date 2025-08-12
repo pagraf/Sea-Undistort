@@ -19,7 +19,7 @@ DOI of Dataset Repository [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15
 
 This repository contains the code of the paper "M. Kromer, P. Agrafiotis, and B. Demir, "Sea-Undistort: A Dataset for Through-Water Image Restoration in High Resolution Airborne Bathymetric Mapping" submitted to IEEE GRSL"<br />
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]([https://arxiv.org/abs/2405.15477](https://doi.org/10.48550/arXiv.2508.07760))
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://doi.org/10.48550/arXiv.2508.07760)
 
 ## Citation
 
