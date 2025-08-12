@@ -46,7 +46,7 @@ If you use the code in this repository or the dataset please cite:
 
 ## Downloading the dataset
 
-For downloading the dataset and a detailed explanation of it, please visit the MagicBathy Project website at [https://www.magicbathy.eu/magicbathynet.html](https://www.magicbathy.eu/magicbathynet.html)
+For downloading the dataset and a detailed explanation of it, please visit the MagicBathy Project website at [https://www.magicbathy.eu/Sea-Undistort.html](https://www.magicbathy.eu/Sea-Undistort.html)
 
 
 ## Dataset structure
