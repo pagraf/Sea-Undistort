@@ -75,9 +75,9 @@ We provide code and model weights for the following deep learning models that ha
 
 | Model Names | Pre-Trained PyTorch Models                                                                                | 
 | ----------- |-----------------------------------------------------------------------------------------------------------|
-| NDR-Restore | [NDR-Restore.zip]()  |
-| ResShift | [ResShift.zip]()|
-| ResShift+EF | [ResShift+EF.zip]()  |
+| NDR-Restore | [NDR-Restore.zip](https://drive.google.com/file/d/1mOFFbo6BiEMIFm8cQ0ysQcYOE8yz-Wqe/view?usp=sharing)  |
+| ResShift | [ResShift.zip](https://drive.google.com/file/d/1GFuzjS7o1plvUDDA5UqBY7OLXLLeTgfm/view?usp=sharing)|
+| ResShift+EF | [ResShift+EF.zip](https://drive.google.com/file/d/1vs-sTJqbAUHjuQ6SBSMzPRT416RFHsTG/view?usp=sharing)  |
 
 To achieve the results presented in the paper, use the parameters and the specific train-evaluation splits provided in the dataset. 
 
