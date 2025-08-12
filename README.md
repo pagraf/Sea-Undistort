@@ -70,16 +70,6 @@ The folder structure should be as follows:
   ┗ 📜 LICENSE_and_info.txt
 ```
 
-## Clone the repo
-
-`git clone https://github.com/pagraf/Sea-Undistort.git`
-
-## Installation Guide
-
-
-## Train and Test the models
-To train and test the models use... 
-
 ## Pre-trained Deep Learning Models
 We provide code and model weights for the following deep learning models that have been pre-trained on Sea-Undistort for through water image restoration:
 
@@ -101,8 +91,6 @@ Example imagery from the Agia Napa area: : (ul) original patches; restorations u
 
 ## Authors
 Maximilian Kromer and Panagiotis Agrafiotis [https://www.user.tu-berlin.de/pagraf/](https://www.user.tu-berlin.de/pagraf/)
-
-
 
 
 ## Feedback
