@@ -84,6 +84,7 @@ To achieve the results presented in the paper, use the parameters and the specif
 ## Example testing results
 Example imagery from the Agia Napa area: : (ul) original patches; restorations using (ur) NDR-Restore, (bl) ResShift, and (br) ResShift+EF.
 <br />
+<br />
 <img width="200" height="200" alt="IMG_4085_org" src="https://github.com/user-attachments/assets/191ab0f3-0c87-4a3b-9248-9f2aaa88bb6c" />
 <img width="200" height="200" alt="IMG_4085_ndr" src="https://github.com/user-attachments/assets/251779e3-e2b1-4997-8bd8-0d98a08c8de5" />
 <img width="200" height="200" alt="IMG_4085_resshift" src="https://github.com/user-attachments/assets/ae84cc41-68a3-4785-b377-880cf83bce1a" />
