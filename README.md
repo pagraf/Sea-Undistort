@@ -8,6 +8,8 @@
 
 In addition, camera settings are uniformly sampled within specific ranges to ensure diverse imaging conditions. Sensor characteristics include a physical width of 36 mm and effective pixel widths of 4000 or 5472 pixels. Focal lengths of 20 mm and 24 mm are simulated with only the central 512x512 pixels rendered. Camera altitude ranges from 30 m to 200 m, resulting in a ground sampling distance (GSD) between 0.014 m and 0.063 m. Average depths range from –0.5 m to –8 m, with a maximum tilt angle of 5°. Sun elevation angles between 25° and 70°, along with varying atmospheric parameters (e.g., air, dust), are used to simulate different illumination conditions. Generated images are accompanied by a .json file containing this metadata per image. 
 
+# Package for benchmarking Sea-Undistort
+
 Sea-Undistort is designed to support supervised training of deep learning models for through-water image enhancement and correction, enabling generalization to real-world conditions where undistorted ground truth is otherwise unobtainable.
 <br />
 <br />
