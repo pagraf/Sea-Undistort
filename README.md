@@ -82,7 +82,7 @@ We provide code and model weights for the following deep learning models that ha
 To achieve the results presented in the paper, use the parameters and the specific train-evaluation splits provided in the dataset. 
 
 ## Example testing results
-Example imagery from the Agia Napa area: : (ul) original patches; restorations using (ur) NDR-Restore, (bl) ResShift, and (br) ResShift+EF.
+Example imagery from the Agia Napa area, in order of appearance from left to right: (1) original patches, restorations using (2) NDR-Restore, (3) ResShift, and (4) ResShift+EF.
 <br />
 <br />
 <img width="200" height="200" alt="IMG_4085_org" src="https://github.com/user-attachments/assets/191ab0f3-0c87-4a3b-9248-9f2aaa88bb6c" />
