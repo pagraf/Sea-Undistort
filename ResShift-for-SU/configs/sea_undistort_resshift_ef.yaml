@@ -1,0 +1,149 @@
+trainer:
+  target: trainer.TrainerDifIRLPIPS
+
+model:
+  target: models.unet.UNetModelSwin
+  ckpt_path: ~
+  params:
+    image_size: 64
+    in_channels: 3
+    model_channels: 160  # 160
+    out_channels: 3
+    attention_resolutions: [64,32,16,8]
+    dropout: 0
+    channel_mult: [1, 2, 2, 4]   # 1224
+    num_res_blocks: [2, 2, 2, 2]
+    conv_resample: True
+    dims: 2
+    use_fp16: False
+    num_head_channels: 32
+    use_scale_shift_norm: True
+    resblock_updown: False
+    swin_depth: 2
+    swin_embed_dim: 192
+    window_size: 8
+    mlp_ratio: 4
+    cond_lq: True
+    cond_mask: True
+    lq_size: 256
+
+diffusion:
+  target: models.script_util.create_gaussian_diffusion
+  params:
+    sf: 1
+    schedule_name: exponential
+    schedule_kwargs:
+      power: 0.3
+    etas_end: 0.99
+    steps: 4
+    min_noise_level: 0.2
+    kappa: 2.0
+    weighted_mse: False
+    predict_type: xstart
+    timestep_respacing: ~
+    scale_factor: 1.0
+    normalize_input: True
+    latent_flag: True
+
+autoencoder:
+  target: ldm.models.autoencoder.VQModelTorch
+  ckpt_path: weights/autoencoder_vq_f4.pth # IMPORTANT: Change to the correct path of autoencoder_vq_f4.pth
+  tune_decoder: False
+  params:
+    lora_tune_decoder: False # idk, otherwise it fails
+    embed_dim: 3
+    n_embed: 8192
+    ddconfig:
+      double_z: False
+      z_channels: 3
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult:
+      - 1
+      - 2
+      - 4
+      num_res_blocks: 2
+      attn_resolutions: []
+      dropout: 0.0
+      padding_mode: zeros
+
+lpips:
+  net: alex
+
+data:
+  train:
+    type: RGBathy
+    params:
+      root_dir: /mnt/storagecube/maxkromer/thesis/Sea-Undistort-Dataloader/dataset # IMPORTANT: Change to the correct path of the dataset
+      shader_folders:
+        - Shader3-13-06-25
+      pair_mode: normal_no_waves
+      split:
+        train: 0.8
+        val: 0.1
+        test: 0.1
+      seed: 42
+      proportional_shaders: true
+      transform_mode: resizecrop
+      size: 256
+      use_augmentation: true
+      negative_values: true
+      color_jittering: "none"
+      add_mask: true
+  val:
+    type: RGBathy
+    params:
+      root_dir: /mnt/storagecube/maxkromer/thesis/Sea-Undistort-Dataloader/dataset # IMPORTANT: Change to the correct path of the dataset
+      shader_folders:
+        - Shader3-13-06-25
+      pair_mode: normal_no_waves
+      split:
+        train: 0.8
+        val: 0.1
+        test: 0.1
+      seed: 42
+      proportional_shaders: true
+      transform_mode: resizecrop
+      size: 256
+      use_augmentation: false
+      negative_values: true
+      color_jittering: "none"           # "none", "light", "strong"
+      add_mask: true
+
+train:
+  # learning rate
+  lr: 5e-5                      # learning rate 
+  lr_min: 2e-5                      # learning rate 
+  lr_schedule: cosin
+  warmup_iterations: 500 # 5000
+  # dataloader
+  batch: [32, 4]                # train batch size, validation batch size
+  microbatch: 8
+  num_workers: 4
+  prefetch_factor: 2            
+  # optimization settings
+  weight_decay: 0               
+  ema_rate: 0.999
+  iterations: 300000            # total iterations
+  # save logging
+  save_freq: 5000 # 10000
+  log_freq: [300, 5000, 4] # [500, 5000, 4]     # [training loss, training images, val images]
+  loss_coef: [1.0, 4.0, 1.0]    # [latent-mse, pixel-lpips, pixel-mse]
+  local_logging: True           # manually save images
+  tf_logging: False             # tensorboard logging
+  # validation settings
+  use_ema_val: True            
+  val_freq: ${train.save_freq}
+  val_y_channel: True
+  val_resolution: ${model.params.lq_size}
+  val_padding_mode: reflect
+  # training setting
+  use_amp: True                # amp training
+  seed: 123456                 # random seed
+  global_seeding: False
+  # model compile
+  compile:
+    flag: False
+    mode: reduce-overhead      # default, reduce-overhead

@@ -81,6 +81,32 @@ We provide code and model weights for the following deep learning models that ha
 
 To achieve the results presented in the paper, use the parameters and the specific train-evaluation splits provided in the dataset. 
 
+## Running the models
+
+- For NDR-Restore inference and training, see `NDR-Instructions.md`.
+- For ResShift and ResShift+EF inference and training, see `ResShift-Instructions.md`.
+
+## Implementation notes and attribution
+
+- We do not include the full model code for NDR-Restore or ResShift. The original codebases are publicly available:
+  - NDR-Restore repository: https://github.com/mdyao/NDR-Restore
+  - ResShift repository: https://github.com/zsyOAOA/ResShift
+- This repository includes only our modified files, configuration files, pretrained weights links, and instructions on how to integrate them into the original projects.
+
+## Environment
+
+- We provide `req.txt` and `environment.yml` at the repository root to create a Python environment compatible with both models. These files reflect the environment we used for our experiments.
+
+## Support
+
+- For further questions about implementation details, please consult the original repositories linked above, open an issue in this repository, or email: m.kromer@tu-berlin.de
+
+## Credits (external models)
+
+- We gratefully acknowledge the authors of the external baselines:
+  - NDR-Restore: https://github.com/mdyao/NDR-Restore
+  - ResShift: https://github.com/zsyOAOA/ResShift
+
 ## Example testing results
 Example imagery from the Agia Napa area, in order of appearance from left to right: (1) original patches, restorations using (2) NDR-Restore, (3) ResShift, and (4) ResShift+EF.
 <br />
@@ -92,7 +118,7 @@ Example imagery from the Agia Napa area, in order of appearance from left to rig
 <br />
 
 ## Authors
-Maximilian Kromer and Panagiotis Agrafiotis [https://www.user.tu-berlin.de/pagraf/](https://www.user.tu-berlin.de/pagraf/)
+Maximilian Kromer [https://github.com/MaximilianKromer](https://github.com/MaximilianKromer) and Panagiotis Agrafiotis [https://www.user.tu-berlin.de/pagraf/](https://www.user.tu-berlin.de/pagraf/)
 
 
 ## Feedback
