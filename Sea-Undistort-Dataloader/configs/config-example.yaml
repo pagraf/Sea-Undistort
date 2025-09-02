@@ -1,0 +1,17 @@
+root_dir: "dataset"
+shader_folders:
+  - "Sea-Undistort"
+pair_mode: "normal_no_waves"   # possible: "normal_no_sunglint", "no_sunglint_no_waves", "normal_filtered_no_waves", ...
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+seed: 42
+proportional_shaders: true
+transform_mode: "resizecrop"            # possible: "resize", "crop", "resizecrop"
+size: 256                          # Size of the patches
+use_augmentation: true              # use augmentation
+color_jittering: "light"           # possible: "none", "light", "strong"
+negative_values: false        # normalize between -1 and 1, otherwise between 0 and 1
+add_mask: True                # return lg, hq and mask
+batch_size: 8

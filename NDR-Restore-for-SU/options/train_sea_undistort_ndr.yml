@@ -1,0 +1,105 @@
+#### general settings
+name: train
+model: NDR
+scale: 2
+gpu_ids: [0]
+
+#### datasets
+
+datasets:
+  train:
+    params:
+      root_dir: /faststorage/maxkromer/thesis/RGBathy-Dataloader/dataset
+      shader_folders:
+        - Shader3-13-06-25
+      pair_mode: normal_no_waves
+      split:
+        train: 0.8
+        val: 0.1
+        test: 0.1
+      seed: 42
+      proportional_shaders: true
+      transform_mode: resizecrop
+      size: 128
+      use_augmentation: true
+      color_jittering: "light"           # "none", "light", "strong"
+      negative_values: false
+      add_mask: false
+    name: Mix
+    mode: NDR_train
+
+    n_workers: 6  
+    batch_size: 4
+    GT_size: 128
+
+  val:
+    params:
+      root_dir: /faststorage/maxkromer/thesis/RGBathy-Dataloader/dataset
+      shader_folders:
+        - Shader3-13-06-25
+      pair_mode: normal_no_waves
+      split:
+        train: 0.8
+        val: 0.1
+        test: 0.1
+      seed: 42
+      proportional_shaders: true
+      transform_mode: resizecrop
+      size: 128
+      use_augmentation: false
+      color_jittering: "none"           # "none", "light", "strong"
+      negative_values: false
+    name: Mix_val
+    mode: NDR_val
+
+#### network structures
+network_G:
+  which_model_G:
+      subnet_type: Resnet
+  in_nc: 3
+  out_nc: 3
+  block_num: [8, 8]
+  scale: 2
+  init: xavier
+
+
+#### path
+
+path:
+  root: ./
+  pretrain_model_G: 
+  strict_load: false
+  resume_state: /faststorage/maxkromer/thesis/NDR-Restore-for-RGBathy/experiments/train/training_state/425000.state # ~
+
+
+#### training settings: learning rate scheme, loss
+
+train:
+  lr_G: !!float 1e-4
+  beta1: 0.9
+  beta2: 0.999
+  niter: 800000
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 350000, 500000, 650000]
+  lr_gamma: 0.5
+
+  pixel_criterion: l1
+
+  manual_seed: 12345
+
+  val_freq: !!float 5000
+
+  lambda_restore: 1
+  lambda_degrad: 1
+
+  weight_decay_G: !!float 1e-8
+  gradient_clipping: 10
+
+
+#### logger
+
+logger:
+  print_freq: 500
+  save_checkpoint_freq: !!float 5000
