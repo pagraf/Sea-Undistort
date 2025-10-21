@@ -4,6 +4,12 @@
 
 # Sea-Undistort: A Synthetic Dataset for Restoring Through-Water Images in Airborne Bathymetric Mapping
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![MagicBathy](https://img.shields.io/badge/MagicBathy-Project-red.svg)](https://www.magicbathy.eu)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.07760-<COLOR>.svg)](https://doi.org/10.48550/arXiv.2508.07760)
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281/zenodo.15639838-blue.svg)](https://doi.org/10.5281/zenodo.15639838)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/maxkromer/Sea-Undistort)
+
 [Sea-Undistort](https://doi.org/10.5281/zenodo.15639838) a synthetic dataset created using the open-source 3D graphics platform Blender. The dataset comprises 1200 image pairs, each consisting of 512×512 pixel RGB renderings of shallow underwater scenes. Every pair includes a “non-distorted” image, representing minimal surface and column distortions, and a corresponding “distorted” version that incorporates realistic optical phenomena such as sun glint, wave-induced deformations, turbidity, and light scattering. These effects are procedurally generated to replicate the diverse challenges encountered in through-water imaging for bathymetry. The scenes are designed with randomized combinations of typical shallow-water seabed types, including rocky outcrops, sandy flats, gravel beds, and seagrass patches, capturing a wide range of textures, reflectance patterns, and radiometric conditions. Refraction is accurately modeled in both the distorted and non-distorted images to maintain geometric consistency with real underwater imaging physics.
 
 In addition, camera settings are uniformly sampled within specific ranges to ensure diverse imaging conditions. Sensor characteristics include a physical width of 36 mm and effective pixel widths of 4000 or 5472 pixels. Focal lengths of 20 mm and 24 mm are simulated with only the central 512x512 pixels rendered. Camera altitude ranges from 30 m to 200 m, resulting in a ground sampling distance (GSD) between 0.014 m and 0.063 m. Average depths range from –0.5 m to –8 m, with a maximum tilt angle of 5°. Sun elevation angles between 25° and 70°, along with varying atmospheric parameters (e.g., air, dust), are used to simulate different illumination conditions. Generated images are accompanied by a .json file containing this metadata per image. 
