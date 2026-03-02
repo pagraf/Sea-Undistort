@@ -124,11 +124,10 @@ Example imagery from the Agia Napa area, in order of appearance from left to rig
 <br />
 
 ## Authors
-Maximilian Kromer [https://github.com/MaximilianKromer](https://github.com/MaximilianKromer) and Panagiotis Agrafiotis [https://www.user.tu-berlin.de/pagraf/](https://www.user.tu-berlin.de/pagraf/)
-
+Maximilian Kromer [https://github.com/MaximilianKromer](https://github.com/MaximilianKromer) and Panagiotis Agrafiotis [http://users.ntua.gr/pagraf/](http://users.ntua.gr/pagraf/)
 
 ## Feedback
-Feel free to give feedback, by sending an email to: agrafiotis@tu-berlin.de
+Feel free to give feedback, by sending an email to: pagraf@central.ntua.gr
 <br />
 
 
